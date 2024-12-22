@@ -16,7 +16,7 @@ if(curUrl.includes("?wqqs=")){
     window.location.href = linkArtikel;
 }else{
     if(wqreferer != undefined){
-        if(curUrl.includes("?wqqs=")){
+        if(wqreferer.includes("?wqqs=")){
             let arrQsReferer   = wqreferer.split('?wqqs=');
             let linkUang        = arrQsReferer[1].split("wqslash").join("/")
                                 .split("wqcolon").join(":")
