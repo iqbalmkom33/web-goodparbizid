@@ -12,8 +12,8 @@ if(curUrl.includes("?wqqs=")){
     console.log(arrQs);
     console.log(linkArtikel);
 
-    alert("masuk atas");
-    //window.location.href = linkArtikel;
+    console.log("masuk atas");
+    window.location.href = linkArtikel;
 }else{
     if(wqreferer != undefined){
         if(curUrl.includes("?wqqs=")){
