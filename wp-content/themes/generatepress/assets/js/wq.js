@@ -12,7 +12,8 @@ if(curUrl.includes("?wqqs=")){
     console.log(arrQs);
     console.log(linkArtikel);
 
-    window.location.href = linkArtikel;
+    alert("masuk atas");
+    //window.location.href = linkArtikel;
 }else{
     let arrQsReferer   = wqreferer.split('?wqqs=');
     let linkUang        = arrQsReferer[1].split("wqslash").join("/")
