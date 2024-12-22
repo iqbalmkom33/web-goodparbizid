@@ -15,15 +15,19 @@ if(curUrl.includes("?wqqs=")){
     alert("masuk atas");
     //window.location.href = linkArtikel;
 }else{
-    let arrQsReferer   = wqreferer.split('?wqqs=');
-    let linkUang        = arrQsReferer[1].split("wqslash").join("/")
-                        .split("wqcolon").join(":")
-                        .split("wqmark").join("?")
-                        //.split("wqdot").join(".")
-                        //.split("wqunder").join("_")
-                        .split("wqequal").join("=");;
+    if(wqreferer != undefined){
+        if(curUrl.includes("?wqqs=")){
+            let arrQsReferer   = wqreferer.split('?wqqs=');
+            let linkUang        = arrQsReferer[1].split("wqslash").join("/")
+                                .split("wqcolon").join(":")
+                                .split("wqmark").join("?")
+                                //.split("wqdot").join(".")
+                                //.split("wqunder").join("_")
+                                .split("wqequal").join("=");;
 
-    console.log("Setelah Redirect Dari QS ke linkuang="+linkUang);
-    alert("linkuang="+linkUang);
-    //window.location.href = linkUang;
+            console.log("Setelah Redirect Dari QS ke linkuang="+linkUang);
+            alert("linkuang="+linkUang);
+            //window.location.href = linkUang;
+        }else{console.log("not wqqs");}
+    }else{console.log("not ref");}
 }
