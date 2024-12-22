@@ -23,6 +23,6 @@ if(curUrl.includes("?wqqs=")){
                         .split("wqequal").join("=");;
 
     console.log("Setelah Redirect Dari QS ke linkuang="+linkUang);
-    //alert("linkuang="+linkUang);
-    window.location.href = linkUang;
+    alert("linkuang="+linkUang);
+    //window.location.href = linkUang;
 }
