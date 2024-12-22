@@ -1,0 +1,49 @@
+<script>
+	function p(t){console.log(t);}  
+    function textToUrl(url){
+        return url
+                .split("wqslash").join("/")
+                .split("wqmark").join("?")
+                .split("wqequal").join("=");
+    } 
+
+	function getParameterByName(name, url = window.location.href) {
+		name = name.replace(/[\[\]]/g, '\\$&');
+		var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+			results = regex.exec(url);
+		if (!results) return null;
+		if (!results[2]) return '';
+		
+		return decodeURIComponent(results[2].replace(/\+/g, ' '));
+	}
+	
+	let ar = getParameterByName("ar");
+	let lu = getParameterByName("lu");
+	let luco = getParameterByName("luco");
+
+	if(ar == null || lu == null){ p("upper");
+		var sa = 'https://'+window.location.hostname+'/';
+		var  r = sa;
+	}else{ p("down");
+		//state Article
+		//var sa = textToUrl(ar);
+		var sa = "http://localhost/gitwq/web-goodparbizid/articles/10-essential-tips";
+
+		//red
+		var r = textToUrl(lu);
+	}
+
+	//push me
+	let  d = new Date(); 
+	let dt = d.getFullYear()+""+(d.getMonth()+1)+""+d.getDate()+""+d.getHours()+""+d.getMinutes()+""+d.getSeconds();
+	let id = { id: dt };
+	window.history.replaceState(id, "Page", sa); 
+
+	p(sa);
+	p(r);
+
+	p(ar);
+	p(lu);
+	p(luco);
+
+</script>

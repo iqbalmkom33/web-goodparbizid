@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Parenting - Bio Link</title>
+    <style>
+        /* Style Settings */
+        body {
+          background-color: white;
+          font-family: "Roboto", sans-serif;
+          margin: auto;
+          padding: 10px;
+          display: flex column;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+        }
+    
+        .Bottom-Section {
+          margin: auto;
+          width: 50%;
+          align-items: center;
+        }
+    
+        #userPhoto {
+          width: 150px;
+          height: 150px;
+          display: block;
+          margin: 45px auto 30px;
+          border-radius: 50%;
+          border: solid #e6e6e6 2px;
+          box-shadow: 0px 7px 15px rgba(20, 20, 20, 0.5);
+        }
+    
+        #userName {
+          color: #1c1c1c;
+          font-size: 25px;
+          display: block;
+          margin: auto;
+          width: 50%;
+          text-align: center;
+          text-decoration: none;
+        }
+    
+        #links {
+          max-width: 600px;
+          width: auto;
+          margin: 25px auto;
+          display: flex column;
+          flex-wrap: wrap;
+          padding: 10px;
+        }
+    
+        .link {
+          display: block;
+          background-color: #ffda87;
+          color: #1c1c1c;
+          font-family: inherit;
+          text-align: center;
+          margin-bottom: 20px;
+          padding: 17px;
+          text-decoration: none;
+          font-size: 20px;
+          border: solid #e6e6e6 2px;
+          box-shadow: 0px 7px 15px rgba(20, 20, 20, 0.5);
+        }
+    
+        .link:hover {
+          background-color: #1c1c1c;
+          color: #e6e6e6;
+        }
+    
+        .icon-container {
+          display: flex;
+          justify-content: space-evenly;
+          padding: 15px;
+          margin: auto;
+          width: 60%;
+          align-items: center;
+          text-align: center;
+        }
+    
+        .icon {
+          font-size: 30px;
+          color: #bbb;
+          opacity: 0.6;
+          height: 30px;
+          text-decoration: none;
+        }
+    
+        .icon:hover {
+          color: black;
+          opacity: 1.6;
+        }
+    
+        p {
+          text-align: center;
+          color: #bbb;
+        }
+    
+        h1 {
+          color: #484848;
+          font-size: 30px;
+          font-weight: bold;
+          font-family: monospace;
+          letter-spacing: 7px;
+          cursor: pointer
+        }
+    
+        h1 span {
+          transition: .5s linear
+        }
+    
+        h1:hover span {
+          color: Black;
+          text-shadow:
+            0 0 10px #fff,
+            0 0 20px white,
+            0 0 40px black;
+        }
+    
+      </style>
+      <link rel="icon" href="https://goodparenting.biz.id/wp-content/uploads/cropped-icgoodparenting2-32x32.jpg" sizes="32x32">
+      <link rel="icon" href="https://goodparenting.biz.id/wp-content/uploads/cropped-icgoodparenting2-192x192.jpg" sizes="192x192">
+      <link rel="apple-touch-icon" href="https://goodparenting.biz.id/wp-content/uploads/cropped-icgoodparenting2-180x180.jpg">
+</head>
+<body>
+      <a class="icon" href="https://goodparenting.biz.id" id="userName">
+        <h1><span>www.GoodParenting.Biz.Id</span></h1>
+      </a>
+      <div id="links">
+        <a class="link" href="https://choakrovoopty.net/4/8467438">choakrovoopty</a>
+        <a class="link" href="https://stoogneechu.net/4/8472619">stoogneechu</a>
+        <a class="link" href="https://laithauptaip.net/4/8472639">laithauptaip</a>
+        <hr>
+        <a class="link" href="https://goodparenting.biz.id/boost-childs-skills">Boost Childs Skills</a>
+        <a class="link" href="https://goodparenting.biz.id/nurturing-growth/">Nurturing Growth</a>
+        <a class="link" href="https://goodparenting.biz.id/tips-helping-toddlers/">Tips Helping Toddlers</a>
+        <a class="link" href="https://goodparenting.biz.id/10-essential-tips/">10 Essential Tips</a>
+        <a class="link" href="https://goodparenting.biz.id/effective-patient-parenting/">Effective Patient Parenting</a>
+        <a class="link" href="https://goodparenting.biz.id/the-ultimate-guide/">The Ultimate Guide</a>
+        <a class="link" href="https://goodparenting.biz.id/transform-your-parenting/">Transform Your Parenting</a>
+      </div>
+      
+      <footer style="text-align:center;">    
+        <p style="color:black">Powered by : <a class="icon" href="https://goodparenting.biz.id">Good Parenting </p>
+      </footer>    
+</body>
+</html>
+
+<script>
+    function p(t){console.log(t);}  
+    function textToUrl(url){
+        return url
+                .split("wqslash").join("/")
+                .split("wqmark").join("?")
+                .split("wqequal").join("=");
+    } 
+	function getParameterByName(name, url = window.location.href) {
+		name = name.replace(/[\[\]]/g, '\\$&');
+		var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+			results = regex.exec(url);
+		if (!results) return null;
+		if (!results[2]) return '';
+		
+		return decodeURIComponent(results[2].replace(/\+/g, ' '));
+	}	
+	let lu = getParameterByName("lu");
+    p(lu);
+
+    if(lu == null){
+        let wqreferer = document.referrer;
+        console.log("referer="+wqreferer);
+
+    }else{
+        let curUrl = window.location.href;   
+        console.log("lu="+lu);
+
+    }
+</script>
