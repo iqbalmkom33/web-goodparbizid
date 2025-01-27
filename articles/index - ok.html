@@ -24,11 +24,17 @@
     
     var defaultArticle  = "https://goodparenting.biz.id/articles/";
     var lu = getParameterByName("lu"); //p(lu);
-    if(lu != null){      
+    if(lu == null){
+      var wqreferer = document.referrer;
+      if( wqreferer != ""){
         var arrQsReferer   = wqreferer.split(defaultArticle+'?lu=');
         var lunew = textToUrl(arrQsReferer[1]);
-        p("luNew="+lunew);
-        //window.location.href = lunew;
+        //p("referer="+wqreferer);    p("luNew="+lunew);
+        window.location.href = lunew;
+      }
+    }else{
+      window.location.href = defaultArticle;
+      //let red = textToUrl(lu); //p("lu="+lu);
     }
   </script>
   <style>
