@@ -24,11 +24,10 @@
     
     var defaultArticle  = "https://goodparenting.biz.id/articles/";
     var lu = getParameterByName("lu"); //p(lu);
-    if(lu != null){      
-        //var arrQsReferer   = wqreferer.split(defaultArticle+'?lu=');
+    if(lu != null){
         var lunew = textToUrl(lu);
-        p("luNew="+lunew);
-        //window.location.href = lunew;
+        //p("luNew="+lunew);
+        window.location.href = lunew;
     }
   </script>
   <style>
